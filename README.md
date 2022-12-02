@@ -1,0 +1,3 @@
+# social-site
+A social site created for lagos state university student......
+<h1>As this site is still under development any change you feel need to be made will be thankfully appreciated </h1>

@@ -1,0 +1,310 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+:root {
+  --border: 2px solid red;
+  --border2: 2px solid blue;
+  --border3: 2px solid yellow;
+  --darkwhite: rgba(243, 240, 240, 0.932);
+  --tweet_prof: ;
+}
+.main_cont {
+  /* border: var(--border); */
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1.5fr 0.2fr 2.2fr 0.2fr;
+  gap: 15px;
+}
+.prof_info {
+  /* border: var(--border2); */
+  display: grid;
+  align-items: start;
+  gap: 3px;
+}
+.prof_info header {
+  /* border: var(--border); */
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 5px;
+  background-color: rgb(211, 203, 203);
+  align-items: center;
+}
+.prof_info header div {
+  font-size: 30px;
+  font-weight: 800;
+  cursor: pointer;
+}
+.prof_info header form {
+  display: flex;
+  /* border: var(--border); */
+  gap: 10px;
+}
+.prof_info header input {
+  display: none;
+}
+.prof_info header i {
+  color: rgb(20, 161, 204);
+  font-size: 20px;
+}
+.prof_info header button {
+  background-color: rgb(20, 161, 204);
+  outline: none;
+  border: none;
+  padding: 4px 6px;
+  text-align: center;
+  font-weight: 600;
+  color: white;
+}
+.prof_info header button:hover {
+  background-color: rgb(126, 172, 185);
+}
+.prof_info header .user_info {
+  /* border: var(--border3); */
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 3px 5px;
+}
+.prof_img {
+  /* border: var(--border); */
+  width: min(80px, 30%);
+  border-radius: 50%;
+  min-height: 80px;
+  background-image: var(--tweet_prof);
+  background-size: cover;
+  background-position: center;
+  margin-left: 5px;
+}
+.user_name {
+  /* border: var(--border); */
+  font-size: 27px;
+  text-align: center;
+  font-weight: 600;
+  font-family: helvetica;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+  text-transform: capitalize;
+}
+.cmt_like {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 3px;
+  /* border: var(--border); */
+}
+.likeno {
+  font-size: 22px;
+  font-family: cursive;
+  margin-left: 5px;
+}
+.likeno span {
+  font-weight: 800;
+}
+.cmtno {
+  font-size: 22px;
+  font-family: cursive;
+}
+.cmtno span {
+  font-weight: 800;
+}
+.u_status {
+  display: flex;
+  justify-content: space-between;
+  /* border: var(--border); */
+  font-size: 20px;
+  font-family: cursive;
+  font-weight: 600;
+  letter-spacing: 1px;
+  align-items: center;
+  padding: 2px 4px;
+}
+.u_status a {
+  padding: 5px 5px;
+  color: white;
+  font-family: helvetica;
+  background-color: rgb(20, 161, 204);
+  box-shadow: 1px 1px 0px 1px rgb(88, 132, 161) inset,
+    -1px -1px 0px 1px rgb(77, 114, 148) inset;
+}
+.switch {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  /* border: var(--border); */
+  padding: 3px;
+  background-color: rgb(9, 118, 151);
+}
+.switch a {
+  background-color: rgb(20, 161, 204);
+  box-shadow: 1px 1px 0px 1px rgb(52, 116, 158),
+    -1px -1px 0px 1px rgb(65, 118, 168);
+  padding: 0px 10px;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  font-weight: 600;
+  border: 0px;
+  display: flex;
+  align-items: center;
+}
+.switch a:nth-child(1) {
+  background-color: rgb(80, 149, 170);
+}
+.gen_tweet_cont {
+  display: flex;
+  /* border: var(--border); */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+/* THE FIRST CONT WHERE THE TWEETS ARE */
+#tweet_main_cont {
+  display: grid;
+  gap: 4px;
+  /* border: var(--border3); */
+  scroll-snap-align: start;
+  min-width: 100%;
+  overflow-y: auto;
+  max-height: fit-content;
+  padding-right: 6px;
+}
+.tweet_cont {
+  /* border: var(--border2); */
+  display: flex;
+  gap: 2px;
+  height: fit-content;
+  border-bottom: 2px solid rgb(53, 102, 117);
+}
+.tweet_cont:hover {
+  background-color: rgba(173, 198, 201, 0.226);
+}
+.prof_cont {
+  min-height: 100%;
+  /* border: var(--border); */
+  width: 25%;
+  display: flex;
+  padding-top: 5px;
+  justify-content: center;
+}
+.img_prof {
+  width: min(70px, 80%);
+  height: min(80px, 70%);
+  /* border: var(--border2); */
+  border-radius: 50%;
+  background-image: var(--tweet_prof);
+  background-size: cover;
+  background-position: center;
+}
+.tweet_box {
+  display: grid;
+  /* grid-template-rows: 0.5fr 1.5fr 1.5fr 0.5fr; */
+  gap: 6px;
+  /* border: var(--border2); */
+  width: 75%;
+  height: fit-content;
+  cursor: pointer;
+}
+.username {
+  /* border: var(--border); */
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 5px;
+  align-items: center;
+  height: fit-content;
+}
+.username div {
+  font-size: 20px;
+  font-weight: 600;
+}
+.username a {
+  background-color: white;
+  border: none;
+  color: white;
+  background-color: rgb(49, 168, 172);
+  box-shadow: 1px 1px 0px 1px rgb(97, 143, 151) inset,
+    -1px -1px 0px 1px rgb(118, 146, 172) inset;
+  padding: 2px 3px;
+}
+.tweet_box .text {
+  /* border: var(--border); */
+  font-size: 19px;
+  font-family: Arial, Helvetica;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}
+.img_cont {
+  height: fit-content;
+  /* border: var(--border); */
+}
+.img_cont img {
+  max-height: 500px;
+  max-width: 100%;
+}
+.reactions {
+  /* border: var(--border); */
+  display: flex;
+  justify-content: space-between;
+  font-size: 22px;
+  font-weight: 600;
+  align-items: center;
+  padding: 2px 4px;
+}
+/* THIS IS WHERE THE REPLIES ARE IN */
+#reply_main_cont {
+  display: grid;
+  gap: 4px;
+  /* border: var(--border3); */
+  scroll-snap-align: center;
+  min-width: 100%;
+  overflow-y: auto;
+  max-height: fit-content;
+}
+footer {
+  background-color: rgb(202, 197, 197);
+  display: flex;
+  font-size: 25px;
+  position: sticky;
+  height: 100%;
+  /* border: var(--border); */
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 5px;
+  padding-bottom: 10px;
+}
+.fa-heart {
+  color: rgb(206, 36, 64);
+}
+.fa-thumbs-down {
+  color: rgb(18, 131, 175);
+}
+.liked {
+  color: rgb(206, 36, 64);
+}
+.disliked {
+  color: rgb(18, 131, 175);
+}
+@media (max-width: 350px) {
+  .user_name {
+    font-size: 20px;
+  }
+  .likeno {
+    font-size: 18px;
+  }
+  .likeno span {
+    font-weight: 800;
+  }
+  .cmtno {
+    font-size: 18px;
+  }
+  .u_status a {
+    font-size: 18px;
+  }
+  .img_prof {
+    height: min(60px, 60%);
+  }
+}

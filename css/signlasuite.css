@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --border: 2px red solid;
+  --border2: 2px blue solid;
+  --darkwhite: rgba(237, 234, 234, 0.882);
+  --font: Helvetica;
+}
+.desk_main_cont {
+  display: none;
+}
+body {
+  background-image: url(/projects/lasu_bck6.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+.main_cont {
+  max-height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: 1.5fr 2.5fr;
+  gap: 40px;
+  /* border: var(--border); */
+  justify-items: center;
+  overflow: hidden;
+}
+.welcome {
+  /* border: var(--border2); */
+  width: 100%;
+  background-image: url(/projects/lasu_bck3.png);
+  background-size: cover;
+  background-position: center;
+  font-size: 23px;
+  font-family: "Merriweather";
+  color: rgb(175, 96, 44);
+  display: grid;
+  place-content: center;
+  text-align: center;
+  letter-spacing: 2px;
+  padding: 2px;
+  font-weight: 600;
+  -webkit-filter: blur(0.5px);
+  box-shadow: 1px 2px 0px 1px rgb(48, 38, 38) inset,
+    -1px -1px 0px 1px rgb(255, 255, 255) inset;
+}
+.form_cont {
+  display: grid;
+  gap: 10px;
+  padding: 20px;
+  width: 100%;
+}
+form {
+  /* border: var(--border); */
+  display: grid;
+  gap: 10px;
+  font-family: helvetica;
+
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.301);
+  backdrop-filter: blur(3px);
+  border-radius: 10px;
+}
+input {
+  margin: 10px;
+  color: rgb(201, 99, 32);
+  font-size: 19px;
+  padding-left: 10px;
+  letter-spacing: 2px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border: none;
+  background-color: rgb(212, 207, 207);
+  box-shadow: 1px 2px 0px 1px rgba(179, 110, 65, 0.692) inset,
+    -1px -2px 0px 1px rgb(255, 255, 255) inset;
+  outline: none;
+}
+button {
+  background-image: linear-gradient(
+    to right,
+    rgb(68, 59, 59) 10%,
+    rgb(212, 198, 198) 80%
+  );
+  justify-self: center;
+  padding: 7px;
+  font-size: 19px;
+  letter-spacing: 2px;
+  color: rgb(172, 89, 41);
+  font-weight: 800;
+  width: 90%;
+  margin-bottom: 20px;
+  box-shadow: 2px 0px 0px 1px rgba(179, 110, 65, 0.692) inset,
+    -2px 0px 0px 1px rgba(179, 110, 65, 0.692) inset;
+}
+
+form a {
+  text-decoration: none;
+}
+form span {
+  color: rgba(179, 110, 65, 0.692);
+  font-weight: 800;
+}
+form span,
+b,
+i {
+  font-size: 18px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 280px) {
+  .main_cont {
+    max-width: 100%;
+  }
+  .welcome {
+    /* border: var(--border2); */
+    width: 100%;
+    letter-spacing: 2px;
+    white-space: wrap;
+    font-size: 20px;
+    padding: 0px;
+    text-align: center;
+  }
+  .form_cont {
+    max-width: 100%;
+    justify-items: start;
+  }
+  form {
+    width: 100%;
+    margin-left: 0;
+    padding: 5px;
+  }
+  input,
+  button {
+    width: 100%;
+    margin: 0px;
+  }
+}
+@media (min-height: 1024px) {
+  .main_cont {
+    grid-template-rows: 1.5fr 2.5fr;
+    min-height: 100%;
+  }
+  .welcome {
+    font-size: 35px;
+    font-weight: 800;
+  }
+  .form_cont {
+    max-width: 70%;
+  }
+  form {
+    gap: 25px;
+  }
+  input,
+  button {
+    font-size: 30px;
+    letter-spacing: 4px;
+  }
+  form span,
+  b,
+  i {
+    font-size: 30px;
+  }
+}
+@media (min-width: 850px) {
+  .main_cont {
+    display: none;
+  }
+  body {
+    background-image: none;
+  }
+  .desk_main_cont {
+    /* border: var(--border); */
+    display: flex;
+    height: 100vh;
+  }
+  .desk_img {
+    width: 50%;
+    /* border: var(--border2); */
+    background-image: url(/projects/lasu_bck8.jpg);
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+  }
+  .desk_welcome {
+    margin: 30px;
+    margin-top: -70px;
+    height: 60vh;
+    font-size: 30px;
+    display: grid;
+    font-family: "Merriweather", helvetica;
+    font-weight: 600;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(194, 189, 189, 0.459);
+    backdrop-filter: blur(3px);
+    letter-spacing: 3px;
+    color: rgb(45, 116, 173);
+    border-radius: 40px;
+  }
+  .desk_form {
+    /* border: var(--border); */
+    width: 50%;
+    display: grid;
+    place-content: center;
+    background-image: url(/projects/lasu_bck7.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  input {
+    box-shadow: 1px 2px 0px 1px rgba(43, 156, 190, 0.884) inset,
+      -1px -2px 0px 1px rgb(255, 255, 255) inset;
+    color: rgba(25, 100, 143, 0.884);
+    font-weight: 600;
+  }
+  button {
+    background-image: linear-gradient(
+      to right,
+      rgba(43, 156, 190, 0.884) 10%,
+      rgb(212, 198, 198) 80%
+    );
+    box-shadow: 2px 0px 0px 1px rgba(21, 197, 197, 0.884) inset,
+      -2px 0px 0px 1px rgba(21, 197, 197, 0.884) inset;
+    color: rgba(25, 100, 143, 0.884);
+  }
+  form span {
+    color: rgba(25, 100, 143, 0.884);
+    font-weight: 800;
+  }
+}

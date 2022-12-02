@@ -1,0 +1,14 @@
+body {
+  /* border: var(--border); */
+  display: grid;
+  align-items: center;
+}
+.form_cont {
+  /* border: var(--border); */
+  position: fixed;
+}
+
+.welcome {
+  /* border: var(--border); */
+  align-self: start;
+}

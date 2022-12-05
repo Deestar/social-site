@@ -1,5 +1,5 @@
 <?php
-if (!isset($_GET['id'])) {
+if (!isset($_POST['cmtid'])) {
     header("location:signlasuite.php");
 } else {
     session_start();
@@ -17,7 +17,7 @@ if (!isset($_GET['id'])) {
         $file_error = $files['error'];
         $filesize = $files['size'];
         $userid = $_SESSION['id'];
-        $id = $_GET['id'];
+        $id = $_POST['cmtid'];
         $object = new replycontrol($userid, $id, $username, $reply, $file_error, $filesize, $filetype, $filetemp_path);
         $object->main();
     }

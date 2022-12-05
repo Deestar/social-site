@@ -128,13 +128,15 @@ function showNestedReplies()
                 <div class="comment_cont">
                     <div class="main_cmt_info" id="' . $maincmt[$i]['replyid'] . '">
                         <div class="main_cmt_prof" style="--main_cmt_prof:url(/projects/lasu_project/' . $maincmt[$i]['profimg'] . ');"></div>
-                        <b>' . $maincmt[$i]['username'] . '</b>
                     </div>
+                    <div class= "main_extra">
+                    <b>' . $maincmt[$i]['username'] . '</b>
                     <div class="main_cmt_text">' . $maincmt[$i]['reply'] . '</div>
                     <div class="reply_reaction" id="' . $maincmt[$i]['replyid'] . '">
                     <i class="' . checkRLike($maincmt[$i]['replyid']) . '">' . $maincmt[$i]['likes'] . '</i>
                             <i class="fa-regular fa-comment">' . getCommentNo($maincmt[$i]['replyid']) . ' </i>
                             <i class="' . checkRDislike($maincmt[$i]['replyid']) . '">' . $maincmt[$i]['dislike'] . '</i>
+                    </div>
                     </div>
                 </div>';
             }

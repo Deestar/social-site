@@ -168,6 +168,7 @@ img {
   justify-content: space-between;
   align-items: center;
   font-size: 25px;
+  margin: 2px;
 }
 .replies_main_cont footer {
   min-width: 100%;
@@ -183,9 +184,10 @@ img {
 }
 .main_cmt_info {
   /* border: var(--border2); */
+  width: 13%;
   display: flex;
-  justify-content: flex-start;
-  padding-left: 10px;
+  justify-content: center;
+  padding-left: 1px;
   gap: 25px;
   min-height: 50px;
   text-align: center;
@@ -195,21 +197,30 @@ img {
   text-transform: capitalize;
   font-family: helvetica;
 }
+.main_extra {
+  display: grid;
+  font-size: 30px;
+  gap: 15px;
+}
+.main_extra b {
+  text-transform: capitalize;
+  font-size: 40px;
+}
 .main_cmt_prof {
   /* border: var(--border); */
-  width: min(60px, 20%);
-  margin: 3px;
+  width: min(80px, 100%);
+  margin: 1px;
   border-radius: 50%;
   background-image: var(--main_cmt_prof);
   background-position: center;
   background-size: cover;
 }
 .main_cmt_text {
-  font-size: 27px;
+  font-size: 30px;
   font-weight: 600;
   letter-spacing: 2px;
   /* border: var(--border); */
-  padding-left: 25px;
+  /* padding-left: 25px; */
   height: fit-content;
 }
 .replies_main_cont form {

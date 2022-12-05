@@ -57,7 +57,7 @@
   cursor: pointer;
 }
 .comment_cont {
-  display: grid;
+  display: flex;
   gap: 4px;
   padding: 8px;
   grid-template-rows: 1fr 3fr;
@@ -171,12 +171,12 @@ img {
 }
 .replies_main_cont footer {
   min-width: 100%;
-    min-height: 100px;
+  min-height: 100px;
   background-color: rgba(182, 175, 175, 0.952);
 }
 .comment_cont {
   /* border: var(--border); */
-  display: grid;
+  display: flex;
   grid-template-rows: 1fr 3fr;
   height: fit-content;
   gap: 10px;
@@ -372,14 +372,14 @@ header {
   overflow: auto;
   gap: 7px;
   display: grid;
-   display: flex;
+  display: flex;
   flex-direction: column;
 }
 /* THE CONTAINER CONTAINING COMMENT AND PROFILE PIC */
 .main_laswuit_cont {
   display: flex;
   height: fit-content;
-   padding: 0 10px;
+  padding: 0 10px;
   padding-top: 7px;
   border-top: 2px solid rgba(161, 155, 155, 0.658);
   gap: 8px;
@@ -438,7 +438,7 @@ header {
   word-spacing: 0.5px;
   font-weight: 500;
   color: black;
-    overflow: hidden;
+  overflow: hidden;
   text-overflow: ellipsis;
   word-break: break-all;
 }
@@ -983,9 +983,9 @@ footer {
     display: none;
   }
 }
-@media (max-width: 600px){
-.replies_main_cont form textarea {
+@media (max-width: 600px) {
+  .replies_main_cont form textarea {
     height: 100px;
     margin-bottom: 30px;
-}
+  }
 }

@@ -26,7 +26,7 @@ class commentcontrol extends lasweetmodel
     {
         if ($this->fileerror > 0) {
             $final = false;
-        } else if ($this->filesize > 300000) {
+        } else if ($this->filesize > 600000) {
             $final = false;
         } else {
             $final = true;
